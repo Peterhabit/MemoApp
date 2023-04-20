@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,13 +50,52 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="MemoApp" id="Utc-vl-XLg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rRh-QU-Dcb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rRh-QU-Dcb">
+                            <connections>
+                                <segue destination="0Ep-Ch-pSk" kind="presentation" id="4dW-i6-Uz0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmH-14-RQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-131" y="-43"/>
+        </scene>
+        <!--새 메모-->
+        <scene sceneID="Ccb-SE-s2M">
+            <objects>
+                <viewController id="oXg-dp-Xmp" customClass="ComposeViewController" customModule="MemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="97I-HF-e8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-pe-F15">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="56c-5D-0wD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KTU-pe-F15" firstAttribute="trailing" secondItem="56c-5D-0wD" secondAttribute="trailing" id="EKM-RV-y6u"/>
+                            <constraint firstItem="KTU-pe-F15" firstAttribute="bottom" secondItem="56c-5D-0wD" secondAttribute="bottom" id="JHx-hq-Dr9"/>
+                            <constraint firstItem="KTU-pe-F15" firstAttribute="leading" secondItem="56c-5D-0wD" secondAttribute="leading" id="aEs-dF-R27"/>
+                            <constraint firstItem="KTU-pe-F15" firstAttribute="top" secondItem="97I-HF-e8Z" secondAttribute="top" id="enq-4p-koC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 메모" id="zfc-bS-GFF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HbN-UR-q4z"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ab5-k9-3b2"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xr3-Q9-Ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594.6564885496182" y="-642.25352112676057"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vd0-Wl-blh">
@@ -73,8 +113,29 @@
             </objects>
             <point key="canvasLocation" x="-131" y="604"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P2r-Bo-Gjl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ep-Ch-pSk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xtW-Uk-KZa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oXg-dp-Xmp" kind="relationship" relationship="rootViewController" id="J92-ty-iG4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZG-5C-ZYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667.93893129770993" y="-642.25352112676057"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
