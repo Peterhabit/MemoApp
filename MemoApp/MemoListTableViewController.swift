@@ -8,6 +8,13 @@
 import UIKit
 
 class MemoListTableViewController: UITableViewController {
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .short
+        f.locale = Locale(identifier: "ko_kr")
+        return f
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +37,15 @@ class MemoListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 사용할 셀 디자인 가져옴
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
+        // 표시할 데이터 가져옴
         let target = Memo.dummyMemoList[indexPath.row]
+        
+        //실제 데이터를 셀에 추가된 레이블에 표시
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = target.insertDate.description
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
 
         return cell
     }
