@@ -94,8 +94,15 @@
                                 <action selector="close:" destination="oXg-dp-Xmp" id="oju-3S-s7N"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ab5-k9-3b2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ab5-k9-3b2">
+                            <connections>
+                                <action selector="save:" destination="oXg-dp-Xmp" id="rAA-gX-Exs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="KTU-pe-F15" id="gXl-L8-kVe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr3-Q9-Ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
