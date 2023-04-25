@@ -9,6 +9,12 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
