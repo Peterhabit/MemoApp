@@ -16,6 +16,7 @@
 		68E848CD29F19BE200FAB002 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E848CC29F19BE200FAB002 /* Model.swift */; };
 		68E848CF29F19FF100FAB002 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E848CE29F19FF100FAB002 /* MemoListTableViewController.swift */; };
 		68E848D129F1A7BA00FAB002 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E848D029F1A7BA00FAB002 /* ComposeViewController.swift */; };
+		9415435229FD590F000E382A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415435129FD590F000E382A /* DataManager.swift */; };
 		948C723329F83FCD009DA591 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C723229F83FCD009DA591 /* UIViewController+Alert.swift */; };
 		94B1B1C629FB8DFA009FC423 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B1B1C529FB8DFA009FC423 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		68E848CC29F19BE200FAB002 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		68E848CE29F19FF100FAB002 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		68E848D029F1A7BA00FAB002 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		9415435129FD590F000E382A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		948C723229F83FCD009DA591 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		94B1B1C529FB8DFA009FC423 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 		68E848B329F1945D00FAB002 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9415435029FD58D5000E382A /* Data */,
 				68E848CB29F19BB200FAB002 /* Model */,
 				68E848B429F1945D00FAB002 /* AppDelegate.swift */,
 				68E848D029F1A7BA00FAB002 /* ComposeViewController.swift */,
@@ -88,6 +91,14 @@
 				68E848CC29F19BE200FAB002 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9415435029FD58D5000E382A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9415435129FD590F000E382A /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 				68E848BF29F1945D00FAB002 /* MemoApp.xcdatamodeld in Sources */,
 				68E848CD29F19BE200FAB002 /* Model.swift in Sources */,
 				948C723329F83FCD009DA591 /* UIViewController+Alert.swift in Sources */,
+				9415435229FD590F000E382A /* DataManager.swift in Sources */,
 				94B1B1C629FB8DFA009FC423 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
