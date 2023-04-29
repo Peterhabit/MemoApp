@@ -55,6 +55,13 @@ class DataManager {
         memoList.insert(newMemo, at: 0)
         saveContext()
     }
+    
+    func deleteMemo(_ memo: Memo?) {
+        if let memo = memo {
+            mainContext.delete(memo)
+            saveContext()
+        }
+    }
 
     // MARK: - Core Data Saving support
 
