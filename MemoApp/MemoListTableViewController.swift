@@ -77,6 +77,8 @@ class MemoListTableViewController: UITableViewController {
         //실제 데이터를 셀에 추가된 레이블에 표시
         cell.textLabel?.text = target.content
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
+        
+        cell.detailTextLabel?.textColor = UIColor(named: "MyLableColor")
 
         return cell
     }
